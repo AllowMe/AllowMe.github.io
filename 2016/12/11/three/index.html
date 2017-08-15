@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="description: 想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Hexo博客搭建的图文教程">
+<meta property="og:url" content="http://AllowMe.github.io/2016/12/11/three/index.html">
+<meta property="og:site_name" content="Han">
+<meta property="og:description" content="description: 想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/nodejs-install.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/win-run.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/nodejs-test.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/git-install.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/git-path-setting.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/git-test.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/github-sign-up.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/github-create-a-new-repo.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/github-new-repo-setting.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/github-new-repo-look-like.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/github-pages.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/npm-install-hexo-cli.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/hexo-v.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/hexo-init.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/hexo-g.png?raw=true">
+<meta property="og:image" content="https://github.com/AllowMe/image/blob/master/hexo-first-time.png?raw=true">
+<meta property="og:updated_time" content="2017-08-15T03:04:00.590Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于Hexo博客搭建的图文教程">
+<meta name="twitter:description" content="description: 想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。">
+<meta name="twitter:image" content="https://github.com/AllowMe/image/blob/master/nodejs-install.png?raw=true">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://AllowMe.github.io/2016/12/11/three/"/>
+
+
+
+
+
+  <title>关于Hexo博客搭建的图文教程 | Han</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Han</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://AllowMe.github.io/2016/12/11/three/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Han He">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Han">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">关于Hexo博客搭建的图文教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-11T22:01:29+08:00">
+                2016-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Exercise/" itemprop="url" rel="index">
+                    <span itemprop="name">Exercise</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="description-想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。"><a href="#description-想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。" class="headerlink" title="description: 想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。"></a>description: 想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。</h4><a id="more"></a>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h3 id="你需要准备好以下软件"><a href="#你需要准备好以下软件" class="headerlink" title="你需要准备好以下软件"></a>你需要准备好以下软件</h3><p><em>Node.js环境</em><br><em>Git </em></p>
+<p>根据Windows版本选择合适的安装软件,下载Node.js安装文件</p>
+<p><strong><a href="https://nodejs.org/dist/v4.2.3/node-v4.2.3-x86.msi" target="_blank" rel="external">Windows Installer 32-bit:</a></strong><br><strong><a href="https://nodejs.org/dist/v4.2.3/node-v4.2.3-x64.msi" target="_blank" rel="external">Windows Installer 64-bit:</a></strong><br>根据自己的Windows版本选择相应的安装文件,要是不知道,就安装32-bit的吧. 如图所示<br><img src="https://github.com/AllowMe/image/blob/master/nodejs-install.png?raw=true" alt="插入图片" title="Node.js安装界面"><br>保持默认设置即可，一路Next,安装很快就结束了.然后我们检查一下是不是要求的组件都安装好了,同时按下Win和R,打开运行窗口: <img src="https://github.com/AllowMe/image/blob/master/win-run.png?raw=true" alt="插入图片" title="Windows的运行界面"><br>在新打开的窗口中输入cmd,敲击回车,打开命令行界面。<strong>（下文将直接用”打开命令行”来表示以上操作,记住哦~）</strong> 在打开的命令行界面中,输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure></p>
+<p>如果结果如下图所示,则说明安装正确,可以进行下一步了,如果不正确,则需要回头检查自己的安装过程。<br><img src="https://github.com/AllowMe/image/blob/master/nodejs-test.png?raw=true" alt="插入图片" title="Node.js安装测试"></p>
+<h2 id="配置Git环境"><a href="#配置Git环境" class="headerlink" title="配置Git环境"></a>配置Git环境</h2><h3 id="下载Git安装文件"><a href="#下载Git安装文件" class="headerlink" title="下载Git安装文件"></a>下载Git安装文件</h3><p><a href="https://github.com/git-for-windows/git/releases/download/v2.6.3.windows.1/Git-2.6.3-64-bit.exe" target="_blank" rel="external">Git 下载</a> </p>
+<p>然后就进入了Git的安装界面，如图<br><img src="https://github.com/AllowMe/image/blob/master/git-install.png?raw=true" alt="插入图片" title="Git安装界面"><br>和Node.js一样,大部分设置都只需要保持默认,但是出于我们操作方便考虑,建议PATH选项按照下图选择:<br><img src="https://github.com/AllowMe/image/blob/master/git-path-setting.png?raw=true" alt="插入图片" title="Git PATH设置"><br>一样的，我们来检查一下Git是不是安装正确了，打开命令行，输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git --version</div></pre></td></tr></table></figure></p>
+<p>如果结果如下图所示，则说明安装正确，可以进行下一步了，如果不正确，则需要回头检查自己的安装过程。<br><img src="https://github.com/AllowMe/image/blob/master/git-test.png?raw=true" alt="插入图片" title="Git安装测试"></p>
+<h2 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h2><h3 id="注册账号-如果已经拥有账号，请跳过此步"><a href="#注册账号-如果已经拥有账号，请跳过此步" class="headerlink" title="注册账号 (如果已经拥有账号，请跳过此步~)"></a>注册账号 (如果已经拥有账号，请跳过此步~)</h3><p>打开(<a href="https://github.com/)，在下图的框中，分别输入自己的用户名，邮箱，密码" target="_blank" rel="external">https://github.com/)，在下图的框中，分别输入自己的用户名，邮箱，密码</a><br><img src="https://github.com/AllowMe/image/blob/master/github-sign-up.png?raw=true" alt="插入图片" title="Github注册"><br>然后前往自己刚才填写的邮箱，点开Github发送给你的注册确认信，确认注册，结束注册流程。</p>
+<p><strong>一定要确认注册，否则无法使用gh-pages！</strong> </p>
+<h3 id="创建代码库"><a href="#创建代码库" class="headerlink" title="创建代码库"></a>创建代码库</h3><p>登陆之后，点击页面右上角的加号，选择New repository<br><img src="https://github.com/AllowMe/image/blob/master/github-create-a-new-repo.png?raw=true" alt="插入图片" title="新建代码库"><br>进入代码库创建页面</p>
+<p>在Repository name下填写yourname.github.io, Description (optional)下填写一些简单的描述（不写也没有关系），如图所示：<br><img src="https://github.com/AllowMe/image/blob/master/github-new-repo-setting.png?raw=true" alt="插入图片" title="代码库设置"><br>正确创建之后，你将会看到如下界面：<br><img src="https://github.com/AllowMe/image/blob/master/github-new-repo-look-like.png?raw=true" alt="插入图片" title="新代码库的界面"></p>
+<h3 id="开启gh-pages功能"><a href="#开启gh-pages功能" class="headerlink" title="开启gh-pages功能"></a>开启gh-pages功能</h3><p>点击界面右侧的<br>Settings，你将会打开这个库的setting页面，向下拖动，直到看见GitHub Pages，如图：<br><img src="https://github.com/AllowMe/image/blob/master/github-pages.png?raw=true" alt="插入图片" title="Github pages"></p>
+<p>点击Automatic page generator，Github将会自动替你创建出一个gh-pages的页面。<br>如果你的配置没有问题，那么大约15分钟之后yourname.github.io这个网址就可以正常访问了~<br>如果yourname.github.io已经可以正常访问了，那么Github一侧的配置已经全部结束了。</p>
+<h2 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在自己认为合适的地方创建一个文件夹，然后在文件夹空白处按住Shift+鼠标右键，然后点击在此处打开命令行窗口。<strong>（同样要记住啦，下文中会使用在当前目录打开命令行来代指上述的操作）</strong></p>
+<p>在命令行中输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<p>然后你将会看到:<br><img src="https://github.com/AllowMe/image/blob/master/npm-install-hexo-cli.png?raw=true" alt="插入图片"><br>可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。然后输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo --save</div></pre></td></tr></table></figure>
+<p>然后你会看到命令行窗口刷了一大堆白字，下面我们来看一看Hexo是不是已经安装好了。<br>在命令行中输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure>
+<p>如果你看到了如图文字，则说明已经安装成功了。<br><img src="https://github.com/AllowMe/image/blob/master/hexo-v.png?raw=true" alt="插入图片" title="Hexo测试"></p>
+<h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h3><p>接着上面的操作,输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+<p>如图<br><img src="https://github.com/AllowMe/image/blob/master/hexo-init.png?raw=true" alt="插入图片" title="hexo初始化"><br>然后输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<p>之后npm将会自动安装你需要的组件，只需要等待npm操作即可。</p>
+<h3 id="首次体验Hexo"><a href="#首次体验Hexo" class="headerlink" title="首次体验Hexo"></a>首次体验Hexo</h3><p>继续操作，同样是在命令行中，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure>
+<p>如图<br><img src="https://github.com/AllowMe/image/blob/master/hexo-g.png?raw=true" alt="插入图片" title="hexo渲染"><br>然后输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure>
+<p>然后会提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
+<p>在浏览器中打开<a href="http://localhost:4000/，你将会看到：" target="_blank" rel="external">http://localhost:4000/，你将会看到：</a><br><img src="https://github.com/AllowMe/image/blob/master/hexo-first-time.png?raw=true" alt="插入图片" title="hexo初体验"><br>到目前为止，Hexo在本地的配置已经全都结束了。</p>
+<h2 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a>使用Hexo</h2><h3 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h3><p>首先，你需要为自己配置身份信息，打开命令行，然后输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name <span class="string">"yourname"</span></div><div class="line">git config --global user.email <span class="string">"youremail"</span></div></pre></td></tr></table></figure>
+<p>同样在_config.yml文件中，找到Deployment，然后按照如下修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"><span class="built_in">type</span>: git</div><div class="line">repo: https://gitHub账户名:密码@yourname/yourname.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
+<p>执行如下操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>来安装所需的插件</p>
+<p>然后在当前目录打开命令行，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>最后就可以根据你的  用户名.github.io  浏览自己的博客了（现在的博客只有默认的Hello World 一篇文章，其他修改设置和如何添加新的文章，我稍后会补全，这篇文章就到这里了哟，拜了个拜）。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/25/one/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/13/two/" rel="prev" title="检验数据类型的方法">
+                检验数据类型的方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Han He" />
+          <p class="site-author-name" itemprop="name">Han He</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Kategorien</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">Tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#description-想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。"><span class="nav-number">1.</span> <span class="nav-text">description: 想想前不久我还是一个电脑白痴，现在可以面不改色的坐在电脑前噼里啪啦的打出这篇文章，真是不得不佩服我自己一下。这些经历让我认识到，只要你想改变，什么时候都不晚。。。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number"></span> <span class="nav-text">准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#你需要准备好以下软件"><span class="nav-number"></span> <span class="nav-text">你需要准备好以下软件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Git环境"><span class="nav-number"></span> <span class="nav-text">配置Git环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载Git安装文件"><span class="nav-number"></span> <span class="nav-text">下载Git安装文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Github"><span class="nav-number"></span> <span class="nav-text">配置Github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册账号-如果已经拥有账号，请跳过此步"><span class="nav-number"></span> <span class="nav-text">注册账号 (如果已经拥有账号，请跳过此步~)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建代码库"><span class="nav-number"></span> <span class="nav-text">创建代码库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启gh-pages功能"><span class="nav-number"></span> <span class="nav-text">开启gh-pages功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Hexo"><span class="nav-number"></span> <span class="nav-text">配置Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number"></span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化Hexo"><span class="nav-number"></span> <span class="nav-text">初始化Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首次体验Hexo"><span class="nav-number"></span> <span class="nav-text">首次体验Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Hexo"><span class="nav-number"></span> <span class="nav-text">使用Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Deployment"><span class="nav-number"></span> <span class="nav-text">配置Deployment</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Han He</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+    Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  </div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">
+    Theme &mdash;
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+      NexT.Muse
+    </a>
+  </div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
