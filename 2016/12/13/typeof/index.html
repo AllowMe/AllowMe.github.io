@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="English">
+<html class="theme-next mist use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -98,10 +98,10 @@
 <meta name="keywords" content="typeof&amp;instanceof">
 <meta property="og:type" content="article">
 <meta property="og:title" content="检验数据类型的方法">
-<meta property="og:url" content="http://AllowMe.github.io/2016/12/13/two/index.html">
+<meta property="og:url" content="http://AllowMe.github.io/2016/12/13/typeof/index.html">
 <meta property="og:site_name" content="Han">
 <meta property="og:description" content="javascript 基本数据类型有5中： 数字, 字符串，布尔值， null和undefined。 复杂数据类型 object（包括Object，Array，RegExp，Math，Data等） 检测变量的类型的方法有好几种，具体咋用呢，请看如下总结">
-<meta property="og:locale" content="English">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-08-15T13:18:09.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="检验数据类型的方法">
@@ -113,7 +113,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -134,7 +134,7 @@
 
 
 
-  <link rel="canonical" href="http://AllowMe.github.io/2016/12/13/two/"/>
+  <link rel="canonical" href="http://AllowMe.github.io/2016/12/13/typeof/"/>
 
 
 
@@ -152,7 +152,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="English">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
   
@@ -200,7 +200,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -210,7 +210,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -257,12 +257,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://AllowMe.github.io/2016/12/13/two/">
+    <link itemprop="mainEntityOfPage" href="http://AllowMe.github.io/2016/12/13/typeof/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Han He">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://github.com/AllowMe/image/blob/master/avatar.jpg?raw=true">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -284,7 +284,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-13T08:00:17+08:00">
                 2016-12-13
@@ -370,7 +370,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/11/three/" rel="next" title="关于Hexo博客搭建的图文教程">
+              <a href="/2016/12/11/Hexo/" rel="next" title="关于Hexo博客搭建的图文教程">
                 <i class="fa fa-chevron-left"></i> 关于Hexo博客搭建的图文教程
               </a>
             
@@ -379,6 +379,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/07/cookie/" rel="prev" title="cookie">
+                cookie <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -432,10 +436,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -443,7 +447,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="https://github.com/AllowMe/image/blob/master/avatar.jpg?raw=true"
+               src="/images/avatar.gif"
                alt="Han He" />
           <p class="site-author-name" itemprop="name">Han He</p>
            
@@ -455,8 +459,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -466,8 +470,8 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
@@ -477,8 +481,8 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">tags</span>
               
             </div>
           
@@ -546,7 +550,7 @@
 
 
   <div class="powered-by">
-    Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+    Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
   </div>
 
   <span class="post-meta-divider">|</span>
@@ -554,7 +558,7 @@
   <div class="theme-info">
     Theme &mdash;
     <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-      NexT.Muse
+      NexT.Mist
     </a>
   </div>
 

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="require," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="requireJs 介绍资料：网站 下载：可以在官网下载，也可以通过github 下载   点击此处 查看下载">
+<meta name="keywords" content="require">
+<meta property="og:type" content="article">
+<meta property="og:title" content="requireJs">
+<meta property="og:url" content="http://AllowMe.github.io/2017/03/19/requirejs/index.html">
+<meta property="og:site_name" content="Han">
+<meta property="og:description" content="requireJs 介绍资料：网站 下载：可以在官网下载，也可以通过github 下载   点击此处 查看下载">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-08-19T15:17:09.991Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="requireJs">
+<meta name="twitter:description" content="requireJs 介绍资料：网站 下载：可以在官网下载，也可以通过github 下载   点击此处 查看下载">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://AllowMe.github.io/2017/03/19/requirejs/"/>
+
+
+
+
+
+  <title>requireJs | Han</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Han</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://AllowMe.github.io/2017/03/19/requirejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Han He">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Han">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">requireJs</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-19T14:30:02+08:00">
+                2017-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/theory/" itemprop="url" rel="index">
+                    <span itemprop="name">theory</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="requireJs-介绍"><a href="#requireJs-介绍" class="headerlink" title="requireJs 介绍"></a>requireJs 介绍</h3><p>资料：<a href="http://requirejs.org" target="_blank" rel="external">网站</a></p>
+<p>下载：可以在<a href="http://requirejs.org" target="_blank" rel="external">官网</a>下载，也可以通过github 下载   <a href="https://github.com/requirejs/requirejs" target="_blank" rel="external">点击此处</a> 查看下载</p>
+<a id="more"></a>
+<h3 id="requireJs-基础"><a href="#requireJs-基础" class="headerlink" title="requireJs  基础"></a>requireJs  基础</h3><blockquote>
+<p>定义模块</p>
+</blockquote>
+<p><strong>语法</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">define(<span class="string">'模块名'</span>，[依赖项],<span class="function"><span class="keyword">function</span>(<span class="params">依赖列表</span>)</span>&#123;</div><div class="line"><span class="comment">//我们自己的代码</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><strong>说明</strong></p>
+<p>模块名：表示当前模块名，一般不写，表示匿名模块。</p>
+<p>依赖项：是一个字符串数组，里面存放着我们当前魔魁啊需要使用的模块名。</p>
+<p>函数参数依次是我们依赖模块的返回值（没有返回值的可以不写）</p>
+<ol>
+<li><p>举例：</p>
+<p> 一个没有名字没有依赖的模块</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'我是一个独立的匿名模块'</span>);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p> 加载模块</p>
+</blockquote>
+<p>语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>([<span class="string">'模块名1,模块名2, ...'</span>]);</div></pre></td></tr></table></figure>
+<p>加载模块可以是一个，也可以是加载多个,用逗号分割就好。模块的名字注意没有路径，也没有后缀。（其实是可以添加路径和后缀的，只是不建议用。）</p>
+<ol>
+<li><p>举例：</p>
+<p> 一个有依赖的模块（moduleB依赖moduleA）</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//moduleA中的内容(js文件)</span></div><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">     <span class="comment">// 创建 div</span></div><div class="line">  <span class="keyword">var</span> div = <span class="built_in">document</span>.createElement( <span class="string">'div'</span> );</div><div class="line">  <span class="comment">// 加到页面中</span></div><div class="line">  <span class="built_in">document</span>.body.appendChild( div );</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//moduleB中的内容（js文件）</span></div><div class="line">define([<span class="string">'moduleA'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"> <span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector( <span class="string">'div'</span> );</div><div class="line"></div><div class="line">  <span class="comment">// 增加样式</span></div><div class="line">  div.style.width = <span class="string">'200px'</span>;</div><div class="line">  div.style.height = <span class="string">'100px'</span>;</div><div class="line">  div.style.border = <span class="string">'1px dashed blue'</span>;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//html中的内容（html文件）</span></div><div class="line"><span class="built_in">require</span>([<span class="string">'moduleB'</span>]);</div></pre></td></tr></table></figure>
+<p>当然也可以写互不依赖的模块，最后多个模块一起加载就好。这里就不再举例了。</p>
+<p><strong>另外</strong>,这里还有一个入口模块的代码，也是加载模块的,使用方法如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./require.js"</span> data-main=<span class="string">"./moduleA.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>当有多层路径时，使用路径搜索加载模块</p>
+</blockquote>
+<p>使用require.config()方法，我们可以对模块的加载行为进行自定义。require.config()就写在主模块（main.js）的头部。参数就是一个对象，这个对象的paths属性指定各个模块的加载路径,路径很长时，可以使用短名字代替长名字。</p>
+<p>语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>.congig(&#123;</div><div class="line">    baseUrl:<span class="string">'搜索的基础路径'</span></div><div class="line">    paths: &#123;</div><div class="line">          短名字<span class="number">1</span>: <span class="string">'长名字'</span>,</div><div class="line">          短名字<span class="number">2</span>: <span class="string">'长名字'</span>,</div><div class="line">          ...</div><div class="line">        &#125; </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>默认查找规则：采用与当前html文件所在的目录为查找的起点，类似相对路径的”./“。注意如果使用绝对路径或者相对路径，这个搜索规则无效。</p>
+<ol>
+<li>举例：</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//html 文件</span></div><div class="line">&lt;script src=<span class="string">"./require.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;script&gt;</div><div class="line">    <span class="built_in">require</span>.config(&#123;</div><div class="line">        <span class="comment">//"./"代表当前文件所在文件夹</span></div><div class="line">      baseUrl: <span class="string">'./'</span>,</div><div class="line">      paths: &#123;</div><div class="line">        jquery: <span class="string">'jquery-1.12.4'</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="built_in">require</span>( [ <span class="string">'module'</span> ] );</div><div class="line">  &lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">  /</span><span class="regexp">/ js文件</span></div><div class="line"><span class="regexp">  /</span><span class="regexp">/ 要求在 该模块中使用 jQuery</span></div><div class="line"><span class="regexp">define( [ 'jquery' ], function ( $ ) &#123;</span></div><div class="line"><span class="regexp">  console.log( $ );</span></div><div class="line"><span class="regexp">&#125;);</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>非模块加载</p>
+</blockquote>
+<p>语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>.congig(&#123;</div><div class="line">    baseUrl:<span class="string">'搜索的基础路径'</span></div><div class="line">    paths: &#123;</div><div class="line">          短名字<span class="number">1</span>: <span class="string">'长名字'</span>,</div><div class="line">          短名字<span class="number">2</span>: <span class="string">'长名字'</span>,</div><div class="line">          ...</div><div class="line">        &#125; </div><div class="line">    shim:&#123;</div><div class="line">         依赖项: &#123;</div><div class="line">          deps: [ <span class="string">'被依赖项'</span> ]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ol>
+<li>举例：</li>
+</ol>
+<p><strong>依赖模型</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//html 文件</span></div><div class="line">&lt;script src=<span class="string">"../../../require.js/require.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;script&gt;</div><div class="line">    <span class="built_in">require</span>.config(&#123;</div><div class="line">      baseUrl: <span class="string">'./'</span>,</div><div class="line">      paths: &#123;</div><div class="line">        jquery: <span class="string">'jquery'</span>,</div><div class="line">        bootstrap: <span class="string">'bootstrap'</span></div><div class="line">      &#125;,</div><div class="line">      shim: &#123;</div><div class="line">        bootstrap: &#123;</div><div class="line">          deps: [ <span class="string">'jquery'</span> ]</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="built_in">require</span>( [ <span class="string">'jquery'</span>, <span class="string">'bootstrap'</span> ] );</div><div class="line">  &lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">  /</span><span class="regexp">/js 文件</span></div></pre></td></tr></table></figure>
+<p><strong>导出模型</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//自定义一个模块（定义为lib.js）</span></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">window</span>.jdu = &#123;</div><div class="line">    name: <span class="string">'捷渡'</span>,</div><div class="line">    age: <span class="number">19</span>,</div><div class="line">    gender: <span class="string">'男'</span></div><div class="line">  &#125;;</div><div class="line">&#125;)();</div><div class="line"></div><div class="line"><span class="comment">//html文件</span></div><div class="line">&lt;script src=<span class="string">"../../../require.js/require.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;script&gt;</div><div class="line">    <span class="built_in">require</span>.config(&#123;</div><div class="line">      baseUrl: <span class="string">'./'</span>,</div><div class="line">      paths: &#123;</div><div class="line">        lib: <span class="string">'lib'</span></div><div class="line">      &#125;,</div><div class="line">      shim: &#123;</div><div class="line">        lib: &#123;</div><div class="line">            <span class="comment">//要导出东西的名字</span></div><div class="line">          exports: <span class="string">'jdu'</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="built_in">require</span>( [ <span class="string">'lib'</span> ], <span class="function"><span class="keyword">function</span> (<span class="params"> a </span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log( a );</div><div class="line">    &#125;);</div><div class="line">  &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/require/" rel="tag"># require</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/11/Proxy/" rel="next" title="正向代理与反向代理">
+                <i class="fa fa-chevron-left"></i> 正向代理与反向代理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/19/seven/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Han He" />
+          <p class="site-author-name" itemprop="name">Han He</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#requireJs-介绍"><span class="nav-number">1.</span> <span class="nav-text">requireJs 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requireJs-基础"><span class="nav-number">2.</span> <span class="nav-text">requireJs  基础</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Han He</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+    Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  </div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">
+    Theme &mdash;
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+      NexT.Mist
+    </a>
+  </div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
